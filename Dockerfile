@@ -8,8 +8,8 @@ RUN apt-get -y update && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Stage Files
-COPY server.properties /server.properties
-COPY start.sh /start.sh
+COPY asset/server.properties /server.properties
+COPY asset/start.sh /start.sh
 RUN chmod 0755 /start.sh
 
 # Setup container
@@ -17,7 +17,7 @@ EXPOSE 19132
 VOLUME ["/data"]
 WORKDIR /data
 
-COPY pocketmine.yml /pocketmine.yml
+COPY asset/pocketmine.yml /pocketmine.yml
 
 # Start Pocketmine
 CMD ["/start.sh"]

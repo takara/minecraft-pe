@@ -14,7 +14,7 @@ cd /data
 tar -zxf ./php-linux-x86-64.tar.gz --no-same-owner
 rm -f /data/install.sh /data/php-linux-x86-64.tar.gz
 
-#cp /pocketmine.yml /data/
+cp /pocketmine.yml /data/
 
 # start pocketmine
 exec ./start.sh

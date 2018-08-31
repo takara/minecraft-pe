@@ -6,7 +6,7 @@
 settings:
  #Three-letter language code for server-side localization
  #Check your language code on https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes
- language: "eng"
+ language: "jpn"
  #Whether to send all strings translated to server locale or let the device handle them
  force-language: false
  shutdown-message: "Server closed"
@@ -25,7 +25,7 @@ settings:
  async-workers: auto
  #Whether to allow running development builds. Dev builds might crash, break your plugins, corrupt your world and more.
  #It is recommended to avoid using development builds where possible.
- enable-dev-builds: true
+ enable-dev-builds: false
 
 memory:
  #Global soft memory limit in megabytes. Set to 0 to disable
@@ -97,9 +97,6 @@ network:
  #Maximum size in bytes of packets sent over the network (default 1492 bytes). Packets larger than this will be
  #fragmented or split into smaller parts. Clients can request MTU sizes up to but not more than this number.
  max-mtu-size: 1492
- #Enable encryption of Minecraft network traffic. This has an impact on performance, but prevents hackers from stealing sessions and pretending to be other players.
- #DO NOT DISABLE THIS unless you understand the risks involved.
- enable-encryption: true
 
 debug:
  #To enable assertion execution, set zend.assertions in your php.ini to 1
@@ -174,7 +171,7 @@ auto-updater:
   warn-console: true
   warn-ops: true
  #Can be development, alpha, beta or stable.
- preferred-channel: beta
+ preferred-channel: stable
  #If using a development version, it will suggest changing the channel
  suggest-channels: true
  host: update.pmmp.io
